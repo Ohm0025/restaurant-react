@@ -12,7 +12,7 @@ const Popular = () => {
           Customer Favorites
         </div>
         <div className="text-[60px] font-bold">Popular Catagories</div>
-        <div className="flex gap-[38px] mt-[78px]">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-[35px] mt-[78px]">
           <PopularItem pic={pic1} title="Main Dish" amount="(86 dishes)" />
           <PopularItem pic={pic2} title="Break Fast" amount="(12 break fast)" />
           <PopularItem pic={pic3} title="Dessert" amount="(48 dessert)" />

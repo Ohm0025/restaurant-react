@@ -2,6 +2,9 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      lg: "1250px",
+    },
     extend: {
       boxShadow: {
         shadow1: "6px 27px 34px 0 rgba(0, 0, 0, 0.1)",

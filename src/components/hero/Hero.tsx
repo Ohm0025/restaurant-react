@@ -4,7 +4,7 @@ import playBtn from "../../assets/playBtn.svg";
 const Hero = () => {
   return (
     <div className="w-full grid grid-cols-2 justify-around min-w-[990px] justify-items-center">
-      <div className="flex flex-col items-center justify-center w-[622px] gap-[60px]">
+      <div className="flex flex-col items-center justify-center max-w-[622px] gap-[60px]">
         <div className="font-extrabold text-[62px]">
           Dive into Delights Of Delectable{" "}
           <span className="text-primary">Food</span>

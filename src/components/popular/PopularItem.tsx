@@ -6,7 +6,7 @@ type Props = {
 
 const PopularItem = (props: Props) => {
   return (
-    <div className="w-[326px] h-[326px] rounded-[40px] bg-[#ffffff] shadow-shadow3 flex flex-col justify-center items-center gap-[13px]">
+    <div className="w-[280px] h-[280px] p-[10px] rounded-[40px] bg-[#ffffff] shadow-shadow3 flex flex-col justify-center items-center gap-[13px]">
       <div className="bg-[#C1F1C6] w-[153px] h-[153px] rounded-full flex justify-center items-center">
         <img src={props.pic} alt="pic-img" />
       </div>
