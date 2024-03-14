@@ -18,6 +18,7 @@ export default {
       colors: {
         primary: "#39DB4A",
         secondary: "#272727",
+        textTwo: "#7B7B7B",
       },
       fontFamily: {
         pop: ["Poppins", "sans-serif"],
