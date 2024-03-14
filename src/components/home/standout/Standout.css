@@ -1,0 +1,4 @@
+button.t-btn:hover img {
+  stroke: white !important;
+  fill: aliceblue;
+}
