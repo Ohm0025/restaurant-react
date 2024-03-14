@@ -26,11 +26,13 @@ const Header = () => {
           <img src={shoppingBag} alt="shopping-bag" />
         </button>
         <button
-          onClick={() => navigatePage("/register")}
+          onClick={() => navigatePage("/auth/register")}
           className="w-[179px] h-[60px] bg-primary rounded-[40px] text-[20px] text-white font-medium">
           Register
         </button>
-        <button className="text-[20px] font-medium hover:underline">
+        <button
+          onClick={() => navigatePage("/auth/login")}
+          className="text-[20px] font-medium hover:underline">
           Sign in
         </button>
       </div>
