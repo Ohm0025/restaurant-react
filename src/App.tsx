@@ -4,8 +4,11 @@ import HomePage from "./components/home/HomePage";
 import AuthLayout from "./layouts/AuthLayout";
 import LoginPage from "./components/login/LoginPage";
 import RegisterPage from "./components/register/RegisterPage";
+import Backdroploading from "./components/backdroploader/Backdroploading";
+import { useLoading } from "./store/loading";
 
 function App() {
+  const { isLoading } = useLoading();
   const router = createBrowserRouter([
     {
       path: "/",
@@ -42,6 +45,7 @@ function App() {
         pauseOnHover
         theme="colored"
       />
+      <Backdroploading isOpen={isLoading} />
     </>
   );
 }

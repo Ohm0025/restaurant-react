@@ -2,6 +2,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { useLoading } from "../../store/loading";
 import { toast } from "react-toastify";
 import { AxiosError } from "axios";
+import { userLogin } from "../../api/authApi";
 
 type LoginObj = {
   email: string;
@@ -9,7 +10,7 @@ type LoginObj = {
 };
 
 const useLoginPage = () => {
-  const { openLoading } = useLoading();
+  const { openLoading, closeLoading } = useLoading();
   const {
     register,
     handleSubmit,
@@ -19,11 +20,15 @@ const useLoginPage = () => {
   const onSubmitLogin: SubmitHandler<LoginObj> = async (data) => {
     try {
       openLoading();
-      console.log("Login process");
+      const res = await userLogin({ ...data });
+      alert(res.data.token);
+      console.log(res.data.message);
     } catch (err: AxiosError | any) {
       toast.error(
         (err.response?.data && err.response.data?.message) || err.message
       );
+    } finally {
+      closeLoading();
     }
   };
 
@@ -35,3 +40,4 @@ const useLoginPage = () => {
 };
 
 export default useLoginPage;
+export type { LoginObj };
